@@ -2,8 +2,8 @@ FROM openjdk:8-jdk-alpine
 
 RUN apk add --no-cache wget && \
     wget https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz && \
-    tar xzf spark-2.4.6-bin-hadoop2.7.tgz && \
-    mv spark-2.4.6-bin-hadoop2.7 /spark
+    tar xzf spark-3.3.1-bin-hadoop3.tgz && \
+    mv spark-3.3.1-bin-hadoop3.tgz /spark
 
 ENV SPARK_HOME /spark
 ENV PATH $SPARK_HOME/bin:$PATH
